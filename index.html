@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cebuana Inquiry Form</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+:root{
+    --primary:#012c48;
+    --footer:#08385f;
+    --footer-bottom:#1b3148;
+    --red:#d44c3c;
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#f5f7fa;
+}
+
+/* ==========================
+   TOP BAR
+========================== */
+
+.topbar{
+    background:var(--primary);
+    color:#fff;
+    padding:14px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.topbar-links,
+.social-icons{
+    display:flex;
+    gap:25px;
+}
+
+.topbar a,
+.social-icons a{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:34px;
+    font-weight:800;
+    color:var(--primary);
+}
+
+.logo span{
+    color:#d45c46;
+}
+
+.nav-menu{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
+}
+
+.branch-btn{
+    background:var(--red);
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:700;
+}
+
+/* ==========================
+   FORM SECTION
+========================== */
+
+.form-section{
+    padding:70px 20px;
+}
+
+.form-card{
+    max-width:950px;
+    margin:auto;
+    background:#fff;
+    padding:50px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.form-card h1{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.form-card p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:var(--primary);
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:15px;
+}
+
+.form-group select{
+    min-height:140px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+.checkbox{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    margin:20px 0;
+}
+
+.submit-btn{
+    background:var(--red);
+    color:#fff;
+    border:none;
+    padding:16px 40px;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+    background:var(--footer);
+    color:#fff;
+}
+
+.footer-container{
+    max-width:1300px;
+    margin:auto;
+    padding:80px 40px;
+    display:grid;
+    grid-template-columns:1.2fr 1fr .8fr;
+    gap:100px;
+}
+
+.footer h2{
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.footer-block{
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+.footer a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.footer-menu{
+    list-style:none;
+}
+
+.footer-menu li{
+    margin-bottom:12px;
+}
+
+.chat-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 26px;
+    background:var(--red);
+    border-radius:4px;
+    margin-top:10px;
+}
+
+.footer-social{
+    display:flex;
+    gap:25px;
+    margin-top:20px;
+}
+
+.footer-social a{
+    font-size:28px;
+}
+
+.footer-bottom{
+    background:var(--footer-bottom);
+    text-align:center;
+    padding:22px;
+}
+
+.scroll-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .footer h2{
+        font-size:32px;
+    }
+
+    .form-card{
+        padding:30px 20px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="topbar-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Follow Us</a>
+    </div>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="https://cebuanalhuillier.com/">
+            <img src="https://cebuanalhuillier.com/wp-content/uploads/2023/09/cl-logo.png" alt="Logo">
+        </a>
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Promos</a></li>
+        <li><a href="#">Mobile App</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Support</a></li>
+    </ul>
+
+    <a href="#" class="branch-btn">Find a Branch</a>
+</nav>
+
+<!-- FORM -->
+
+<section class="form-section">
+
+<div class="form-card">
+
+<h1>Product Inquiry Form</h1>
+<p>Please complete the form below.</p>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D8d000009oofE" method="POST">
+
+<input type="hidden" name="oid" value="00D8d000009oofE">
+<input type="hidden" name="retURL" value="https://cebuanalhuillier.com/">
+
+<div class="form-row">
+<div class="form-group">
+<label>First Name</label>
+<input id="first_name" name="first_name" maxlength="40" type="text">
+</div>
+
+<div class="form-group">
+<label>Last Name</label>
+<input id="last_name" name="last_name" maxlength="80" type="text">
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>Mobile</label>
+<input id="mobile" name="mobile" maxlength="40" type="text">
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input id="email" name="email" maxlength="80" type="email">
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>City</label>
+<input id="city" name="city" maxlength="40" type="text">
+</div>
+
+<div class="form-group">
+<label>Branch</label>
+<input id="00NJ7000000kLQv" name="00NJ7000000kLQv" maxlength="50" type="text">
+</div>
+</div>
+<input type="hidden" name="lead_source" value="QR Campaign">
+
+<div class="form-group">
+<label>Product Interested In</label>
+
+<select id="00Nd300000AFKf5"
+name="00Nd300000AFKf5"
+multiple>
+
+<option value="Micro Loan">Micro Loan</option>
+<option value="Insurance">Insurance</option>
+<option value="Savings Account">Savings Account</option>
+<option value="Bills Payment">Bills Payment</option>
+
+</select>
+</div>
+<div class="form-group">
+    <label for="document">Upload Document</label>
+    <input
+        type="file"
+        id="document"
+        name="document"
+        accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+</div>
+<div class="checkbox">
+<input id="00Nd300000AFLSz"
+name="00Nd300000AFLSz"
+type="checkbox"
+value="1">
+
+<label for="00Nd300000AFLSz">
+I consent to the collection and processing of my information.
+</label>
+</div>
+
+<button type="submit" class="submit-btn">
+Submit Inquiry
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div>
+<h2>Contact Us</h2>
+
+<div class="footer-block">
+<strong>Text us:</strong><br>
+GLOBE - 09178122737<br>
+SMART - 09188122737
+</div>
+
+<div class="footer-block">
+<strong>Email us:</strong><br>
+cebuanacares@pjlhuillier.com
+</div>
+
+<div class="footer-block">
+<strong>Call us:</strong><br>
+8779.9800 (PLDT)<br>
+7759.9800 (Globe)
+</div>
+
+<a href="#" class="chat-btn">
+<i class="fa-regular fa-comments"></i>
+Chat Us!
+</a>
+
+</div>
+
+<div>
+<h2>Services</h2>
+
+<ul class="footer-menu">
+<li><a href="#">Pawning</a></li>
+<li><a href="#">Money Transfer</a></li>
+<li><a href="#">Bank</a></li>
+<li><a href="#">Micro Savings</a></li>
+<li><a href="#">Microinsurance</a></li>
+<li><a href="#">Other Services</a></li>
+</ul>
+</div>
+
+<div>
+<h2>Follow Us</h2>
+
+<div class="footer-social">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 All Rights Reserved.
+</div>
+
+</footer>
+
+<button class="scroll-top"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+
+</body>
+</html>
